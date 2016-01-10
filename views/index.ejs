@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>
+      Interview Prep
+    </title>
+    <link rel="stylesheet" href="/public/vendor/Materialize/dist/css/materialize.min.css">
+    <link rel='stylesheet' href='/css/style.css' />
   </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+
+  <body class="ng-cloak" ng-app='interview'>
+    <!-- <ng-include src="'html/general/nav.html'"></ng-include> -->
+    <div class="container">
+      <ui-view></ui-view>
+    </div>
+
+    <script src="/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/vendor/angular/angular.min.js"></script>
+    <script src="/vendor/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="/vendor/Materialize/dist/js/materialize.min.js"></script>
+    <script src="/js/bundle.js"></script>
   </body>
+
 </html>
