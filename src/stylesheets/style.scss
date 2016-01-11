@@ -1,8 +1,47 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font          : 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  display       : flex;
+  min-height    : 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 a {
   color: #00B7FF;
+}
+
+.parallax-container {
+  height: 800px;
+}
+.parallax {
+  width: 100%;
+}
+
+.vertical-or {
+    position: absolute;
+    top: calc(50% - 23px);
+    left: -11px;
+    background: #ffffff;
+    padding: 10px 0px;
+    color: #9e9e9e;
+}
+
+.create-list-login-panel {
+    max-width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 10px;
+}
+
+.ng-cloak {
+  display: none !important;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  background-color: white;
 }

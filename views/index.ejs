@@ -2,24 +2,133 @@
 <html>
 
   <head>
-    <title>
-      Interview Prep
-    </title>
-    <link rel="stylesheet" href="/public/vendor/Materialize/dist/css/materialize.min.css">
+    <title>Interview Prep</title>
+    <link rel="stylesheet" href="/vendor/Materialize/dist/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel='stylesheet' href='/css/style.css' />
   </head>
 
-  <body class="ng-cloak" ng-app='interview'>
-    <!-- <ng-include src="'html/general/nav.html'"></ng-include> -->
+  <body class="ng-cloak" ng-app='interview' ng-controller="homeCtrl">
+    <div class="navbar-fixed">
+      <nav class="light-blue">
+        <div class="nav-wrapper">
+          <a class="brand-logo" href="#">Interview Prep</a>
+          <ul class="right hide-on-med-and-down">
+            <li>
+              <a href="#">Questions</a>
+            </li>
+            <li>
+              <a href="#">Challenges</a>
+            </li>
+            <li>
+              <a ui-sref="resources">Resources</a>
+            </li>
+
+            <!-- <li>
+              <a href="#">
+                <i class="material-icons left">mode_edit</i> New Post
+              </a>
+            </li> -->
+
+            <li ng-if="!loggedIn">
+              <a ui-sref="login">
+                <i class="material-icons left">vpn_key</i> Login
+              </a>
+            </li>
+            <li ng-if="loggedIn">
+              <a class="dropdown-button" data-activates="dropdown" href="#">Profile
+                <i class="material-icons right">arrow_drop_down</i>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Profile Dropdown -->
+
+    <ul class="dropdown-content" id="dropdown">
+      <li>
+        <a href="#!">Profile</a>
+      </li>
+      <li>
+        <a href="#!">Something</a>
+      </li>
+      <li>
+        <a href="#!">Something else</a>
+      </li>
+      <li class="divider"></li>
+      <li>
+        <a href="#!">Logout</a>
+      </li>
+    </ul>
+
+    <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+      <a class="btn-floating btn-large red">
+        <i class="large material-icons">mode_edit</i>
+      </a>
+      <ul>
+        <li>
+          <a class="btn-floating red">
+            <i class="material-icons">insert_chart</i>
+          </a>
+        </li>
+        <li>
+          <a class="btn-floating yellow darken-1">
+            <i class="material-icons">format_quote</i>
+          </a>
+        </li>
+        <li>
+          <a class="btn-floating green">
+            <i class="material-icons">publish</i>
+          </a>
+        </li>
+        <li>
+          <a class="btn-floating blue">
+            <i class="material-icons">attach_file</i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+
     <div class="container">
       <ui-view></ui-view>
     </div>
+
+
+    <footer class="page-footer light-blue">
+      <div class="container">
+        <div class="row">
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">About</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">FAQ</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Contact</a></li>
+          </ul>
+
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          © 2016 Michael Liang
+          <a class="grey-text text-lighten-4 right" href="#!">View Source Code on Github</a>
+        </div>
+      </div>
+    </footer>
 
     <script src="/vendor/jquery/dist/jquery.min.js"></script>
     <script src="/vendor/angular/angular.min.js"></script>
     <script src="/vendor/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="/vendor/Materialize/dist/js/materialize.min.js"></script>
     <script src="/js/bundle.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(".dropdown-button").dropdown();
+        $('.parallax').parallax();
+      })
+
+    </script>
   </body>
 
 </html>

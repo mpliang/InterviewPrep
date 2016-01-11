@@ -16,7 +16,7 @@ var dirs = {
   dist: {
     css: './public/css',
     js: './public/js',
-    html: './public/html',
+    html: './public/templates',
     img: './public/images'
   }
 };

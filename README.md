@@ -20,4 +20,6 @@
 
 - [ ] Watch some angular tutorials to get a better feel for how file structure is supposed to be
 
-- [ ] Tab of resources to study/practice
+- [x] Tab of resources to study/practice
+
+- [ ] Custom 404 page

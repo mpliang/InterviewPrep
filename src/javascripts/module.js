@@ -5,5 +5,8 @@ window.url = 'http://localhost:3000/';
 app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/');
   $stateProvider
-  .state('/', { url: '/', templateUrl: './views/home.ejs', controller: 'mainCtrl' })
+  .state('/', { url: '/', templateUrl: './templates/home.html', controller: 'mainCtrl' })
+  .state('login', { url: '/login', templateUrl: './templates/login.html', controller: 'loginCtrl' })
+  .state('resources', { url: '/resources', templateUrl: './templates/resources.html' })
+  .state('test', { url: '/test', templateUrl: './templates/parallax.html' })
 }]);

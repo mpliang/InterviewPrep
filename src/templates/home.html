@@ -1,0 +1,258 @@
+<p># Javascript Interview Questions
+
+  ## Build an Angular app like Heroku’s Scheduler:
+
+  ```Heroku’s Scheduler is a small web app that lets you add jobs. It shows you your current jobs which includes the name of the job, the amount of dynos, the frequency (hourly, daily, etc.), last time the job ran, and the next date the job is due to run.
+
+  Below that, each job has an edit & remove button. When you click edit, all of the fields become inputs to change the values.
+
+  At the very bottom of all of your jobs is an “Add new job” button, when you click it the button disappears and a new incomplete form is appended. When you fill in the inputs and hit save, the form is appended and appears just how every other one does, when you click cancel the form disappears and the button reappears.
+
+  Sign in/create an account with Heroku and create an app. Add “Heroku Scheduler” (a free add-on) to your app. You can then see how the Heroku Scheduler app works as well as use my explanation.
+
+  Recreate this app using Angular.js. You don’t need to plugin a backend (just send HTTP requests to static .json files/mock HTTP requests). We are looking to see how you tackle this problem with code. Please use directives, filters, or whatever Angular.js feature belongs (rather than jQuery or plain JavaScript) where possible, and make it as interactive and single page-app-ish as possible.
+
+  Please take your time and ask if you have any questions, this should take no longer than 1-2 hours. Please do all work on GitHub (publicly).
+
+  Commit often. Write understandable code. Test your code.
+  ```
+
+  ```
+  Part 1
+
+  Create an users table with the following fields and insert 10 million random rows into the table
+
+  id
+  full_name
+  email
+  city
+  Find all the users who have john in their name so John smith, Smith john, Johnny etc should all be returned
+
+  Optimize query so it doesn’t take more than few milli seconds.
+
+  Part 2
+
+  Make a chat application using PHP, nodejs/socket.io. It should be simple chat application with
+  one public channel.
+
+  Populate chat with 1000 random messages by random users every 5 seconds.
+
+  Make a list of 100 words. These words should be blocked on public channel.
+
+  Deploy chat on a server.
+  ```
+
+
+  ```
+  "What's the difference between private, protected, and public?"
+  "What does REGEX stand for, and what is it?"
+  "Define the various terms, class, object, method?"
+  "What does MVC stand for?"
+  "What does DRY stand for?"
+  "What is an iterator?"
+
+  "Describe some of the HTML5 tags?"
+  "What does ORM stand for?"
+  "What's the difference between attr_accessor and attr_accessible?"
+  "What are the various model relationships assignments in ActiveRecord?"
+  "Describe how to build a has_many, and belong_to_many model relationship."
+  "What are the various model validations in Rails?"
+  "What's a hash, and how do you add/remove values from it?"
+  "What's the difference between extend and inlcude?"
+  "What is a Ruby Module?"
+  "What is unit testing?"
+  "What is noSQL?"
+  "What is REDIS?"
+  "How would you diagnose, and resolve slow DB queries?"
+  "How does nginx differ from Apache?"
+  "What is a Rails environment?"
+  "What are the various Ruby iterators?"
+  "When might you use the inject method?"
+  "What's your favorite Ruby gem, and why?"
+  ```
+
+  ## Angular and other general questions
+
+  ```
+  What’s the difference between a service and factory?
+  Learn about using Karma and Jasmine which one is the task runner etc etc
+  What is a watcher?
+  What happens to your app when you have to many watchers?
+  List a few ways to improve performance of an angular app?
+  Be able to explain $scope and how it works.
+  What is a custom directive / When would you use one?
+  Be able to explain what a callback is
+  Same with promises
+  ```
+
+  ```
+  Standard JS Questions:
+  Explain javascript closures
+  Explain event bubbling
+  Explain event delegation
+  What does apply() do
+  What does bind() do
+  Explain what the js map function does provide an example
+  What is strict mode
+  Whats the difference between a promise and a callback
+  Angular JS Questions:
+  What is scope
+  What is a directive
+  What is the link function in the directive
+  What is the digest cycle (after I mentioned it in giving another answer)
+  What is $scope.$apply
+  What are the most commonly used out of the box directives
+  What does transclude do on directives
+  Tell me about a time you had problems with state in angular
+  Have you ever had performance issues in angular and how did you tackle them
+  What do you like about angular, what do you dislike about angular
+  Why use a q promise as opposed to just returning $http’s promise
+  What does $resource do
+  General/Presentation Layer Questions:
+  What is a model in mvc
+  Explain css specificity
+  How do you centre something horizontally
+  Explain what media queries are
+  What are the pros and cons of a single page app
+  How could you improve performance of a single page app
+  Whats the difference between inline-block and inline
+  How would you develop a mobile site for a website that didn’t already have one
+  What is jsonp
+  What is a doctype
+  On a unix command line how would you run a long command you typed out already an hour ago
+  What frontend tools do you normally use
+  Where do you think ui’s are heading
+  What motivates you, how do you learn
+  JS Challenge Type Questions:
+  The first few the employer stole from You Can't JavaScript Under Pressure :)
+  Write a function that takes an integer and returns it doubled
+  function doubleInteger(i) {
+      //your code here
+
+  }
+  Write a function that takes a number and returns true if it's even and false if not
+  function isNumberEven(i) {
+      // i will be an integer. Return true if it's even, and false if it isn't.
+  }
+  Write a function that returns a file extension
+  function getFileExtension(i) {
+
+      // i will be a string, but it may not have a file extension.
+      // return the file extension (with no period) if it has one, otherwise false
+
+  }
+  What will be printed on the console? Why?
+  (function() {
+     var a = b = 5;
+  })();
+  console.log(b);
+  Define a repeatify function on the String object. The function accepts an integer that specifies how many times the string has to be repeated. The function returns the string repeated the number of times specified.
+  For example:
+  console.log('hello'.repeatify(3));
+  //Should print hellohellohello.
+  What will log out here?
+  function test() {
+     console.log(a);
+     console.log(foo());
+
+     var a = 1;
+     function foo() {
+        return 2;
+     }
+  }
+  test();
+  What will log out here?
+  var fullname = 'John Doe';
+  var obj = {
+     fullname: 'Colin Ihrig',
+     prop: {
+        fullname: 'Aurelio De Rosa',
+        getFullname: function() {
+           return this.fullname;
+        }
+     }
+  };
+
+  console.log(obj.prop.getFullname());
+
+  var test = obj.prop.getFullname;
+
+  console.log(test());
+  Fix the previous question’s issue so that the last console.log() prints Aurelio De Rosa.
+   .
+  The following recursive code will cause a stack overflow if the array list is too large. How can you fix this and still retain the recursive pattern?
+  var list = readHugeList();
+
+  var nextListItem = function() {
+      var item = list.pop();
+
+      if (item) {
+          // process the list item...
+          nextListItem();
+      }
+  };
+  What will alert out here:
+  var a = 'value';
+
+  (function() {
+    alert(a);
+    var a = 'value2';
+  })();
+  The following code will output "my name is rex, Woof!" and then "my name is, Woof!" one second later, fix it so prints correctly the second time
+  var Dog = function (name) {
+    this.name = name;
+  };
+
+  Dog.prototype.bark = function () {
+    console.log('my name is '+ this.name + ', Woof!');
+  }
+
+  var rex = new Dog('rex');
+
+  rex.bark();
+
+  setTimeout(rex.bark, 1000);
+  The following code outputs 100, a hundred times, fix it so it outputs every number with a 100ms delay between each
+  for (var i = 0; i < 100; ++i) {
+    setTimeout(function() {
+      console.log(i);
+    }, 100);
+  }
+  The following code is outputting the array but it's filled with every number, we just want the even numbers, what's gone wrong?
+  var evenNumbers = []
+
+  var findEvenNumbers = function (i) {
+    if (i % 2 === 0)
+      console.log(i, 'is an even number, adding to array!');
+      evenNumbers.push(i);
+  }
+
+  for (var i = 0; i < 10; i++) {
+    findEvenNumbers(i);
+  }
+
+  console.log(evenNumbers);
+  //outputs:
+  //0 "is an even number, adding to array!"
+  //2 "is an even number, adding to array!"
+  //4 "is an even number, adding to array!"
+  //6 "is an even number, adding to array!"
+  //8 "is an even number, adding to array!"
+  //[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  The following is outputting 0, but if 42 = 16 and 22 = 4 then the result should be 12
+  var square = function (number) {
+    result = number * number;
+    return result;
+  }
+
+  result = square(4);
+  result2 = square(2);
+  difference = result - result2;
+
+  console.log(difference);
+  Write a function that when passed an array of numbers it gives you the max difference between the largest and smallest number ONLY if the small number is in front of the large number, not behind it, so for example: [3,4,8,1] = 5, notice how the biggest difference is between 8 and 1, but because the 1 is after the 8 in the array it shouldn't count, so really the biggest gap is the 3 and the 8.
+  fizzbuzz (lol)
+  I was presented with a html element with a border, and asked to animate it left to right full width of browser
+  I was presented with another html box and asked to centre it both horizontally and vertically
+  ```
+  </p>

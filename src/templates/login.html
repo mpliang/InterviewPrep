@@ -1,0 +1,164 @@
+<div class="row create-list-button disabled" id="create-list-login-container">
+  <div class="col s12 m6 l6">
+    <div class="create-list-login-panel center create-list-connect-btn">
+      <p class="flow-text">Login with GitHub.</p>
+      <div>
+        <a class="connect-btn button-github btn create-list-button" href="#">
+          <svg style="width:24px;height:24px;top: 6px; position: relative; right: 5px;" viewBox="0 0 24 24"></svg>
+          Github</a>
+      </div>
+      <div>
+        Already have an account?
+        <a class="modal-trigger" href="#login-modal">Sign in here.</a>
+      </div>
+    </div>
+  </div>
+  <div class="col s12 hide-on-med-and-up or-divider">
+    <span>OR</span>
+  </div>
+  <div class="col s12 m6 l6 create-list-login-right">
+    <div class="hide-on-small-only vertical-or">OR</div>
+    <div class="create-list-login-panel center">
+      <div>
+        <input class="new-list-name-hidden" name="new-list-name" type="hidden">
+        <div class="center">
+          <p class="flow-text">Create a new account</p>
+        </div>
+        <div class="row">
+          <div class="col s12 input-field">
+            <input id="new-your-name" name="new-your-name" type="text">
+            <label for="new-your-name">Your name</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12 input-field">
+            <input id="new-your-email" name="new-your-email" type="email">
+            <label for="new-your-email">Your email address</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12 input-field">
+            <input id="new-your-password" name="new-your-password" type="password">
+            <label for="new-your-password">Pick a password</label>
+          </div>
+        </div>
+        <div class="row center">
+          <button class="btn" id="create-account-and-list">Create Account</button>
+          <div class="hidden" id="creating-list-and-account-spinner">
+            <div class="preloader-wrapper small active">
+              <div class="spinner-layer spinner-blue">
+                <div class="circle-clipper right">
+                  <div class="circle"></div>
+                </div>
+              </div>
+
+              <div class="spinner-layer spinner-red">
+                <div class="circle-clipper right">
+                  <div class="circle"></div>
+                </div>
+              </div>
+
+              <div class="spinner-layer spinner-yellow">
+                <div class="circle-clipper right">
+                  <div class="circle"></div>
+                </div>
+              </div>
+
+              <div class="spinner-layer spinner-green">
+                <div class="circle-clipper right">
+                  <div class="circle"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="materialize-red-text lighten-2" id="create-account-and-list-message"></p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="login-modal">
+  <div class="modal-content">
+    <div class="row section">
+      <h5>Sign in</h5>
+      <div class="center">
+        <a class="connect-btn button-github btn" href="#">
+          <svg style="width:24px;height:24px;top: 6px; position: relative; right: 5px;" viewBox="0 0 24 24">
+          </svg>
+          GitHub</a>
+      </div>
+      <div class="row or-divider">
+        <span>OR</span>
+      </div>
+      <div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="user-email" name="user-email" type="email">
+            <label for="user-email">Your email address</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="user-password" name="user-password" type="password">
+            <label for="user-password">Your password</label>
+          </div>
+        </div>
+        <div class="center-align" id="login-button-panel">
+          <button class="btn" id="login-btn">Login</button>
+          <div class="preloader-wrapper small active" id="login-preloader" style="display: none;">
+            <div class="spinner-layer spinner-blue">
+              <div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+
+            <div class="spinner-layer spinner-red">
+              <div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+
+            <div class="spinner-layer spinner-yellow">
+              <div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+
+            <div class="spinner-layer spinner-green">
+              <div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="red-text center-align" id="login-failed-panel" style="display: none;">
+          Login failed, please try again.
+        </div>
+        <div class="section center">
+          <a class="modal-trigger" href="#" href="#forgot-password-modal">Forgot password?</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="forgot-password-modal">
+  <div class="modal-content">
+    <h4>Reset Password</h4>
+    <div class="section">
+      <p class="flow-text">Enter your email address and we'll send you a link to reset your password.</p>
+      <form action="/forgot-password" method="post">
+        <div class="row">
+          <div class="col s12 input-field">
+            <input id="forgot-password-email" name="forgot-password-email" type="email">
+            <label for="forgot-password-email">Your email address</label>
+          </div>
+        </div>
+
+        <button class="btn">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
