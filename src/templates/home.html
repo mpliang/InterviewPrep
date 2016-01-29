@@ -1,3 +1,19 @@
+<!-- be able to sort by new, top, etc -->
+Top Interview Questions
+
+<div class="" ng-repeat="post in topPosts track by $index">
+  <h3>{{post.title}}</h3>
+  <p>
+    {{post.body}}
+  </p>
+  <span>{{post.points}}</span>
+  <button type="button" name="button">Upvote</button>
+  <button type="button" name="button">Downvote</button>
+</div>
+
+
+
+
 <p># Javascript Interview Questions
 
   ## Build an Angular app like Heroku’s Scheduler:
