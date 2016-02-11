@@ -8,6 +8,9 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
+var mongoose = require('mongoose');
+mongoose.connect(process.env.MONGOLAB_URI || "mongodb://localhost/interviewPrep");
+
 var app = express();
 
 // view engine setup
