@@ -1,7 +1,7 @@
 'use strict'
 
 var express = require('express');
-var Post = require('../models/posts');
+var Post = require('../models/post');
 var router = express.Router();
 
 /* GET home page. */
@@ -18,7 +18,7 @@ router.get('/allPosts', function(req, res, next) {
 router.post('/newPost', (req, res) => {
   console.log("req.body", req.body);
   Post.create(req.body, (err, savedPost) => {
-    res.status(err ? 400 : 200).send(err || savedPost)
+    res.status(err ? 400 : 200).send(err || savedPost);
   });
 });
 

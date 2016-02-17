@@ -8,8 +8,9 @@ app.controller('loginCtrl', function($scope, $state, userService) {
     $state.go('login');
   }
 
-  $scope.register = function() {
-    userService.register($scope.registerUsername, $scope.registerPassword)
+  $scope.register = function(user) {
+    console.log(user);
+    userService.register(user)
     .then(function() {
       console.log('registered');
       $state.go('find');

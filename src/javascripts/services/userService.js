@@ -2,7 +2,7 @@
 
 app.service('userService', function($http) {
 
-  this.register = function(username, password) {
+  this.register = function(user) {
     return $http({
       method: 'POST',
       url: '/users/register',
@@ -10,8 +10,9 @@ app.service('userService', function($http) {
         authorization: `Bearer ${localStorage.getItem("token")}`
       },
       data: {
-        username: username,
-        password: password,
+        name: user.name,
+        email: user.email,
+        password: user.password,
       }
     })
     .then(function(resp) {
@@ -30,8 +31,8 @@ app.service('userService', function($http) {
         authorization: `Bearer ${localStorage.getItem("token")}`
       },
       data: {
-        username: username,
-        password: password,
+        email: user.email,
+        password: user.password,
       }
     })
     .then(function(resp) {

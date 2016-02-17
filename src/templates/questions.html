@@ -1,0 +1,11 @@
+<h1>questions</h1>
+
+<div class="" ng-repeat="post in allPosts track by $index">
+  <h3>{{post.title}}</h3>
+  <p>
+    {{post.body}}
+  </p>
+  <span>{{post.points}}</span>
+  <button type="button" name="button">Upvote</button>
+  <button type="button" name="button">Downvote</button>
+</div>
