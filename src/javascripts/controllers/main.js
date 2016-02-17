@@ -4,6 +4,8 @@ app.controller('mainCtrl', function($scope, $state) {
 
 
   $scope.loggedIn = false;
+
+  $scope.allPosts = [];
   // $scope.topicFeed;
   // let currentUser = auth.currentUser();
   // $scope.loggedIn = auth.isLoggedIn();

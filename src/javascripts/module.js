@@ -7,6 +7,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
   $stateProvider
   .state('/', { url: '/', templateUrl: './templates/home.html', controller: 'mainCtrl' })
   .state('login', { url: '/login', templateUrl: './templates/login.html', controller: 'loginCtrl' })
+  .state('home', { url: '/index', templateUrl: './templates/home.html', controller: 'homeCtrl' })
   .state('resources', { url: '/resources', templateUrl: './templates/resources.html' })
   .state('newPost', { url: '/newpost', templateUrl: './templates/newPost.html' })
   .state('test', { url: '/test', templateUrl: './templates/parallax.html' })

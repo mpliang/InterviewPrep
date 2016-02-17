@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/all', function(req, res, next) {
+router.get('/allPosts', function(req, res, next) {
   Post.find( (err, data)  => {
     res.json(data)
   });

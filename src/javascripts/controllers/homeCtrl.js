@@ -2,10 +2,16 @@
 'use strict';
 
 //index, navbar controller
-app.controller('homeCtrl', function($scope, $state) {
+app.controller('homeCtrl', function($scope, $state, postService) {
 
   $scope.loggedIn = true;
-
+  postService.getAll().then(
+    data => {
+      $scope.allPosts = data;
+    }, error => {
+      console.error(error);
+    }
+  )
   // $scope.topPosts = [
   //   {
   //     title: '## Build an Angular app like Heroku’s Scheduler:',

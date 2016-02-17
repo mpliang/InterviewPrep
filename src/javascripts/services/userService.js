@@ -1,6 +1,6 @@
 'use strict';
 
-app.service('userSvc', function($http) {
+app.service('userService', function($http) {
 
   this.register = function(username, password) {
     return $http({
@@ -15,9 +15,10 @@ app.service('userSvc', function($http) {
       }
     })
     .then(function(resp) {
+      console.log(resp);
       localStorage.setItem("token", resp.data);
     }, function(err) {
-      alert(err.data);
+      console.error(err.data);
     })
   }
 
@@ -34,8 +35,10 @@ app.service('userSvc', function($http) {
       }
     })
     .then(function(resp) {
+      console.log(resp);
       localStorage.setItem("token", resp.data);
     }, function(err) {
-      alert(err.data);
+      console.error(err.data);
     })
   }
+});
